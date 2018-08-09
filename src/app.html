@@ -7,7 +7,7 @@
         <button type="submit">Add Todo</button>
     </form>
 
-    <todo-list todos.bind="todos">
+    <todo-list todos.bind="todos" remove-todo.delegate="foobar($event)">
 
     </todo-list>
 

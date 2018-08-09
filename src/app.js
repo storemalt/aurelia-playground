@@ -20,4 +20,9 @@ export class App {
             this.todos.splice(index, 1);
         }
     }
+
+    foobar(event) {
+        console.log(event.detail);
+        this.removeTodo(event.detail)
+    }
 }
