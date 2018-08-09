@@ -1,11 +1,9 @@
 <template>
     <require from="./todo-list"></require>
-    <require from="./exclamation-value-converter"></require>
-    <require from="./json-value-converter"></require>
     <h1>${heading} - ${todos.length} added</h1>
 
     <ul>
-        <li repeat.for="todo of todos">
+        <li repeat.for="todo of todos | reverse">
             ${$index}: ${todo | json}
         </li>
     </ul>
@@ -15,7 +13,7 @@
         <button type="submit">Add Todo</button>
     </form>
 
-    <todo-list todos.bind="todos" remove-todo.delegate="foobar($event)">
+    <todo-list todos.bind="todos | reverse" remove-todo.delegate="foobar($event)">
 
     </todo-list>
 
