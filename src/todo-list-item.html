@@ -1,7 +1,10 @@
 <template>
+    <require from="./upper-case-value-converter"></require>
+    <require from="./reverse-string-value-converter"></require>
+    ${key}
     <input type="checkbox" checked.bind="todo.done">
     <span css="text-decoration: ${todo.done ? 'line-through' : 'none'}">
-        ${todo.description}
+        ${todo.description | upperCase | reverseString}
     </span>
-    <button click.trigger="removeTodo()">Remove</button>
+    <button click.trigger="removeTodo($index)">Remove</button>
 </template>

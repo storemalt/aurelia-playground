@@ -4,9 +4,14 @@ import { bindable, inject, DOM } from 'aurelia-framework';
 
 export class TodoListItem {
     @bindable todo;
+    @bindable key;
 
     constructor(element){
         this.element = element;
+    }
+
+    bind(){
+        console.log(this.key);
     }
 
     removeTodo() {

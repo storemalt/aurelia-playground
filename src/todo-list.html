@@ -1,6 +1,6 @@
 <template>
     <require from="./todo-list-item"></require>
-    <todo-list-item repeat.for="todo of todos" todo.bind="todo">
+    <todo-list-item repeat.for="todo of todos" todo.bind="todo" key.bind="$index">
 
     </todo-list-item>
 </template>

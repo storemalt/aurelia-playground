@@ -1,6 +1,14 @@
 <template>
     <require from="./todo-list"></require>
+    <require from="./exclamation-value-converter"></require>
+    <require from="./json-value-converter"></require>
     <h1>${heading} - ${todos.length} added</h1>
+
+    <ul>
+        <li repeat.for="todo of todos">
+            ${$index}: ${todo | json}
+        </li>
+    </ul>
 
     <form submit.trigger="addTodo()">
         <input type="text" value.bind="todoDescription">
