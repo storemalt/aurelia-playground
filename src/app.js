@@ -3,7 +3,7 @@ import {Todo} from './todo';
 export class App {
     constructor() {
         this.heading = "Todos";
-        this.todos = [];
+        this.todos = [new Todo('hello world')];
         this.todoDescription = '';
     }
 

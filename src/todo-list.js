@@ -1,10 +1,10 @@
-import { bindable, inject } from 'aurelia-framework';
+import { bindable } from 'aurelia-framework';
 
 export class TodoList {
     @bindable todos;
 
     removeTodo(todo) {
-        
+
     }
 }
 
